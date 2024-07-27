@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Sate
+      </h1>
+
+      <section class="section brand">
+        <div class="brand-bg">
+          <style>
+            .brand-bg {
+              background-image: url('./img/brand.jpg');
+            }
+
+            @media screen and (max-width: 768px) {
+              .brand-bg {
+                background-image: url('./img/brand--mobile.jpg');
+              }
+            }
+          </style>
+        </div>
+
+        <div class="container-xxl">
+          <div class="brand__header">
+            <h2 class="brand__title">
+              Sate
+            </h2>
+            <p class="brand__text">
+              российский производитель качественной и надежной бытовой техники, созданный с любовью и заботой о Вашем
+              доме!
+            </p>
+          </div>
+        </div>
+
+        <div class="background-gray">
+          <div class="container-xxl">
+            <ul class="brand__achievements list-reset">
+              <li class="brand__achievements-item">
+                <span class="brand__achievements-total">
+                  7
+                </span>
+                Лет мы продаем товары для уюта вашего дома
+              </li>
+              <li class="brand__achievements-item">
+                <span class="brand__achievements-total">
+                  2 000
+                </span>
+                Заказов ежемесячно обрабатывают менеджеры
+              </li>
+              <li class="brand__achievements-item">
+                <span class="brand__achievements-total">
+                  4 278
+                </span>
+                Человек доверились нам
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="brand__content">
+          <div class="container-xxl brand__content-container">
+            <div class="brand__content-start dependent-element">
+              <h3 class="brand__content-title">
+                Главная миссия бренда
+              </h3>
+              <p class="brand__content-text">
+                Мы тщательно подбирали все материалы, используемые для создания продуктов. Наша техника производится на
+                лучших заводах по стандартам европейского качества и представляет не только продукт, но и
+                высококачественный сервис с индивидуальным подходом к каждому клиенту.
+              </p>
+              <p class="brand__content-text">
+                Качественное сырьё,
+                эргономичность, современные технологии – мы продумали множество мелочей, благодаря которым готовка и
+                уборка станут приятным времяпровождением.
+              </p>
+              <p class="brand__content-text">
+                Каждый наш продукт проходил несколько этапов проверок, поэтому все товары SATE экологичны, гарантируют
+                высочайший уровень безопасности, а дизайнеры компании SATE постарались создать для вас именно ту линейку
+                продукции, из которой хотелось бы собрать целую коллекцию.Добро пожаловать в мир строго дизайна и
+                надежного качества!
+              </p>
+            </div>
+            <div class="brand__content-end">
+              <ul class="brand__content-pictures list-reset">
+                <li>
+                  <picture>
+                    <source srcset="./img/about-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/about-2.jpg" class="brand__content-image image" width="655"
+                      height="370" alt="Фото">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/about-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/about-2.jpg" class="brand__content-image image" width="655"
+                      height="370" alt="Фото">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/about-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/about-2.jpg" class="brand__content-image image" width="655"
+                      height="370" alt="Фото">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/about-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/about-2.jpg" class="brand__content-image image" width="655"
+                      height="370" alt="Фото">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brand__bottom">
+        <div class="container-xxl">
+          <h3 class="brand__bottom-title">
+            Товар бренда Sate
+          </h3>
+        </div>
+
+        <div class="wrapper-slider wrapper-slider--xxl wrapper-slider--full-md-down">
+          <div class="swiper swiper__card">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card" data-add-card="false">
+                  <a href="./card.html" class="wrapper-slider">
+                    <div class="swiper swiper__card-image">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source srcset="./img/card-1.webp" type="image/webp">
+                            <img loading="lazy" src="../img/card-1.png" class="card__image image" width="180"
+                              height="250" alt="Фото">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination swiper__card-image-pagination"></div>
+                    </div>
+                  </a>
+                  <a href="./card.html" class="card__header">
+                    <span class="card__header-article">
+                      SATE CT-200
+                    </span>
+                    <h4 class="card__header-title">
+                      Кофемашина с сенсорным экраном Sate СТ-200
+                    </h4>
+                  </a>
+                  <div class="card__detail">
+                    <div class="card__price price">
+                      <span class="price-main">
+                        46 990 ₽
+                      </span>
+                      <span class="price-sale">
+                        69 990 ₽
+                      </span>
+                      <span class="price-percentage">
+                        -30%
+                      </span>
+                    </div>
+                    <div class="card__split">
+                      <span class="card__split-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/split.svg#svg-split"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500 ₽
+                        </span>
+                      </span>
+                      <p class="card__split-text">
+                        <span class="md-hidden">x 4 платежа</span> в Сплит
+                      </p>
+                    </div>
+                    <div class="card__yandex">
+                      <span class="card__yandex-badge">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/yandex-plus.svg#svg-yandex-plus"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          3500
+                        </span>
+                      </span>
+                      <p class="card__yandex-text">
+                        баллов плюса
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button type="button" class="btn btn-dark card__button btn--add" data-graph-path="modal-add-card">
+                      В корзину
+                    </button>
+                    <a href="#" class="btn btn-outline-primary btn--goto">
+                      Перейти в корзину
+                    </a>
+                    <div class="card__counter counter">
+                      <button class="btn counter__minus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/minus.svg#svg-minus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                      <button class="btn counter__plus">
+                        <span class="icon counter__icon">
+                          <svg>
+                            <use xlink:href="img/plus.svg#svg-plus"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-add-favorite card__favorite">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/favorite.svg#svg-favorite"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper__card-prev">
+            <button type="button" class="btn wrapper-slider-btn">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="swiper-button-next swiper__card-next">
+            <button type="button" class="btn wrapper-slider-btn">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-xxl">
+          <div class="product__bottom-info">
+            <p class="product__bottom-text">
+              Мы тщательно подбирали все материалы, используемые для создания продуктов. Наша техника производится на
+              лучших заводах по стандартам европейского качества и представляет не только продукт, но и
+              высококачественный
+              сервис с индивидуальным подходом к каждому клиенту.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brand__news background-gray">
+        <div class="container-xxl">
+          <h3 class="brand__bottom-title">
+            Вам может быть интересно
+          </h3>
+          <ul class="news__list list-reset">
+            <li>
+              <article class="news__item">
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="news__item">
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="news__item">
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="news__item">
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-mailing section-mailing-p background-gray">
+        <div class="container-xxl">
+          <article class="mailing background-light">
+            <div class="mailing__info">
+              <h2 class="mailing__info-title">
+                Промокод на 10% скидку
+              </h2>
+              <p class="mailing__info-text">
+                Подпишитесь на рассылку и узнавайте первым о новинках и новостях. Так же получите промокод с 10% скидкой
+                на любую покупку
+              </p>
+            </div>
+            <form action="#" class="mailing__form">
+              <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36"
+                required>
+              <label class="mailing__form-checkbox custom-checkbox">
+                <div class="custom-checkbox__wrapper">
+                  <input type="checkbox" class="custom-checkbox__field" checked required>
+                  <span class="custom-checkbox__checked"></span>
+                </div>
+                <span class="custom-checkbox__content">Я ознакомился с политикой конфиденциальности</span>
+              </label>
+              <button type="submit" class="btn btn-dark btn-dark-lg mailing__form-button">
+                Подписаться
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      @include('partials/modal.html')
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

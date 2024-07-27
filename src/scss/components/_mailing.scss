@@ -1,0 +1,80 @@
+.section-mailing {
+	margin-block-end: 80px;
+
+	&-p {
+		margin-block: 0;
+		padding-block: 80px;
+	}
+}
+
+.mailing {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(370px, 740px));
+	justify-content: space-between;
+	gap: 30px;
+	background-color: var(--background-gray);
+	border-radius: 16px;
+	padding: 40px;
+
+	&__info {
+
+		&-title {
+			font-size: 28px;
+			line-height: 1.2;
+			margin-block-end: 30px;
+		}
+
+		&-text {
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.2;
+			color: var(--dark-color);
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: minmax(220px, 450px) minmax(140px, 270px);
+		align-content: flex-start;
+		align-items: center;
+		gap: 20px 30px;
+
+		&-field {
+			--_background-color: var(--background-light);
+			--_background-color-active: var(--background-light);
+			--_padding-x: 20px;
+		}
+
+		&-button {
+			width: 100%;
+		}
+
+		&-checkbox {
+			grid-column: -1 / 1;
+			order: 1;
+		}
+	}
+
+	&.background-light {
+
+		.mailing__form-field {
+			--_background-color: var(--background-gray);
+			--_background-color-active: var(--background-gray);
+		}
+
+		.custom-checkbox__field {
+			background-color: var(--background-gray);
+		}
+
+		.custom-checkbox--outline {
+
+			.custom-checkbox__field {
+				background-color: var(--background-gray);
+
+				&:invalid {
+					background-color: var(--background-light);
+				}
+			}
+		}
+	}
+}

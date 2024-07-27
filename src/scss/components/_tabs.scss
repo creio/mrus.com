@@ -1,0 +1,108 @@
+.tabs {
+
+	&__container {
+		width: 100%;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: #D7DDE3;
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+			z-index: -1;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		justify-content: center;
+		gap: 40px;
+		padding: 0 var(--container-offset) 1px;
+		overflow-x: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		&-item {
+			display: block;
+			flex: 0;
+		}
+
+		&-btn,
+		&-btn--scroll {
+			--_font-size: 20px;
+			--_font-weight: 700;
+			--_color: #B6C0C9;
+			--_border: 0;
+			--_border-radius: 0;
+
+			--_color-active: var(--dark-color);
+
+			white-space: nowrap;
+			margin-block-end: -1px;
+			border-bottom: 2px solid transparent;
+			padding-block-end: 30px;
+			outline: none;
+
+			&:focus {
+				color: var(--_color);
+				background-color: var(--_background-color);
+			}
+
+			&--active,
+			&.is-active {
+				color: var(--_color-active);
+				background-color: var(--_background-color-active);
+				border-color: var(--primary-color);
+			}
+		}
+	}
+
+	&__panel {
+		width: 100%;
+		height: 0px;
+		display: block;
+		visibility: hidden;
+		outline: none;
+		opacity: 0;
+		overflow: hidden;
+
+		&--active {
+			height: auto;
+			visibility: visible;
+			overflow: visible;
+			opacity: 1;
+		}
+
+		&:not(.tabs__panel--active) {
+
+			.section-scroll {
+				height: 0px !important;
+				padding: 0 !important;
+			}
+		}
+	}
+}
+
+@media (hover: hover) {
+
+	.tabs {
+
+		&__nav {
+
+			&-btn {
+				transition: border var(--_transition-duration) var(--_transition-type), color var(--transition-duration) var(--transition-type);
+
+				&:is(:hover, :focus-visible, :active) {
+					color: var(--_color-active);
+					background-color: var(--_background-color-active);
+				}
+			}
+		}
+	}
+
+}

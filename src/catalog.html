@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Каталог</h1>
+      @include('partials/catalog.html')
+      @include('partials/mailing.html')
+      @include('partials/modal.html')
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

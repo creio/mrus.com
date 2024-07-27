@@ -1,0 +1,4 @@
+.burger { 
+	@include burger;
+	flex-shrink: 0;
+}

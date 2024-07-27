@@ -1,0 +1,171 @@
+.about {
+
+	&__hero {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		margin-block-end: 80px;
+
+		&-container {
+			min-height: 760px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-block: 40px;
+		}
+
+		&-title {
+			font-size: 64px;
+			line-height: 1;
+			color: var(--light-color);
+			text-align: center;
+			margin-block-end: 20px;
+		}
+
+		&-text {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.2;
+			color: var(--light-color);
+			text-align: center;
+		}
+	}
+
+	&__way {
+		margin-block-end: 80px;
+
+		&-container {
+			position: relative;
+
+			&-xxl {
+				padding-inline: 0;
+			}
+		}
+
+		&-aside {
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: var(--container-offset);
+			z-index: 5;
+
+			&-list {
+				display: grid;
+				gap: 24px;
+				height: max-content;
+				position: sticky;
+				top: var(--header-height);
+				right: 0;
+				z-index: 5;
+
+				&.dependent-element {
+
+					&--full {
+						top: calc(var(--header-height) + 60px) !important;
+					}
+				}
+			}
+
+			&-anchor {
+				--_font-size: 24px;
+				--_font-weight: 500;
+				--_color: #B6C0C9;
+				--_border: 0;
+				--_border-radius: 0;
+
+				--_color-active: var(--dark-color);
+
+				display: flex;
+				gap: initial;
+				margin-inline-start: auto;
+
+				&:is(:hover, :focus-visible, :active) {
+					--_font-weight: 700;
+				}
+
+				&.is-active {
+					--_font-weight: 700;
+
+					.about__way-aside-decor {
+						width: 36px;
+						margin-inline-start: 12px;
+					}
+				}
+			}
+
+			&-decor {
+				display: block;
+				width: 0px;
+				border-top: 2px solid var(--primary-color);
+				flex-shrink: 0;
+				margin-inline-start: 0px;
+				transition: width var(--transition-duration) var(--transition-type), margin var(--transition-duration) var(--transition-type);
+			}
+		}
+
+		&-list {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 100px;
+		}
+
+		&-item {
+			display: block;
+
+			&:nth-child(2n) {
+
+				.about__way {
+
+					&-header {
+						flex-direction: row-reverse;
+					}
+					
+					&-text {
+						order: 1;
+					}
+				}
+			}
+		}
+
+		&-header {
+			display: flex;
+			gap: 30px;
+			margin-block-end: 40px;
+		}
+
+		&-year {
+			font-size: 64px;
+			font-weight: 700;
+			line-height: 1;
+			color: var(--primary-color);
+		}
+
+		&-title {
+			font-size: 32px;
+			font-weight: 500;
+			line-height: 1;
+			margin-block-end: 0;
+		}
+
+		&-content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+
+		&-text {
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 1.6;
+			color: var(--dark-color);
+		}
+
+		&-image {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
+	}
+}

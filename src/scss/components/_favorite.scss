@@ -1,0 +1,16 @@
+.favorite {
+
+	.border-top {
+		padding-block-start: 40px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(270px, 430px));
+		gap: 16px;
+
+		&-card {
+			max-width: 600px;
+		}
+	}
+}

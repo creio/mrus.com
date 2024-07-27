@@ -1,0 +1,127 @@
+.contact {
+
+	&__info {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+		background-color: var(--background-light);
+		border-radius: 16px 16px 0 0;
+		padding: 40px 30px;
+
+		&-title {
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 1;
+			margin-block-end: 0;
+		}
+	}
+
+	&__detail {
+		display: grid;
+		grid-template-columns: minmax(200px ,340px) 1fr;
+		gap: 40px;
+		border-top: 1px solid #D7DDE3;
+		padding-block-start: 30px;
+
+		&-title {
+			font-size: 22px;
+		font-weight: 500;
+		line-height: 1;
+		margin-block-end: 0;
+		}
+
+		&-list {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 24px;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.2;
+			color: var(--text-color);
+		}
+
+		&-item {
+			display: grid;
+			grid-template-columns: 135px 1fr;
+			gap: 40px;
+			color: var(--text-color);
+
+			&-value {
+				color: var(--dark-color);
+			}
+
+			&-link {
+				--_font-size: inherit;
+				--_font-weight: inherit;
+				--_line-height: inherit;
+				--_color: inherit;
+				--_border: 0;
+				--_border-radius: 0;
+			}
+		}
+	}
+
+	&__map {
+		background-color: var(--background-light);
+		border-radius: 0 0 16px 16px;
+
+		&-iframe {
+			display: block;
+			width: 100%;
+			height: 440px;
+			border-radius: 16px;
+		}
+	}
+}
+
+.requisite {
+
+	&__container {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 40px;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		margin-block-end: 0;
+	}
+
+	&__content {
+		font-weight: 700;
+		line-height: 1;
+		color: var(--dark-color);
+		background-color: var(--background-light);
+		border-radius: 10px;
+		padding: 40px 30px;
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 240px 1fr;
+		gap: 16px;
+		border-bottom: 1px solid #D7DDE3;
+		padding-block: 20px;
+		color: var(--dark-color);
+
+		&:first-child {
+			padding-block-start: 0;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+			padding-block-end: 0;
+		}
+
+		&-span,
+		&-value {
+			color: var(--dark-color, #000);
+		}
+
+		&-value {
+			font-weight: 500;
+			text-align: right;
+		}
+	}
+}

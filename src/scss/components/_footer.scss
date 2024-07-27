@@ -1,0 +1,120 @@
+.footer {
+
+	&-top {
+		border-top: 1px solid #d7dde3;
+		padding-block: 80px;
+
+		&__container {
+			display: grid;
+			grid-template-columns: max-content minmax(280px, 1200px);
+			gap: 60px;
+			justify-content: space-between;
+		}
+
+		&__logo {
+			margin-block-end: 30px;
+		}
+
+		&__callback {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0;
+
+			& + & {
+				margin-block-start: 12px;
+			}
+
+			.callback__number {
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 1;
+				margin-block-end: 12px;
+			}
+
+			.callback__text {
+				margin-block-end: 8px;
+			}
+
+			.callback__date {
+				font-size: var(--font-size-xs);
+				color: var(--text-color-light);
+			}
+		}
+
+		&__detail {
+			display: grid;
+			grid-template-columns: repeat(4, max-content);
+			justify-content: space-between;
+			gap: 60px 20px;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: max-content;
+			align-content: flex-start;
+			gap: 24px 40px;
+			font-size: 18px;
+
+			&-inner {
+				display: grid;
+				grid-template-columns: repeat(2, max-content);
+				gap: 24px 40px;
+			}
+			
+			&-title {
+				font-size: inherit;
+				margin-block-end: 6px;
+			}
+
+			&-link {
+				--_font-size: inherit;
+				--_font-weight: 500;
+				--_color: var(--text-color-light);
+			}
+		}
+	}
+
+	&-bottom {
+		background-color: var(--background-dark);
+		padding-block: 60px;
+
+		&__container {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 30px;
+		}
+
+		&__detail {
+			font-size: var(--font-size-xs, 14px);
+			font-weight: 500;
+			line-height: 1.2;
+			color: var(--light-color, #fff);
+			margin-block-end: 20px;
+
+			&-span {
+				color: var(--light-color, #fff);
+			}
+		}
+
+		&__copy {
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--light-color, #fff);
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: max-content;
+			gap: 16px;
+			text-align: right;
+		}
+
+		&__link {
+			--_font-size: var(--font-size-xs, 14px);
+			--_font-weight: 500;
+			--_color: var(--light-color, #fff);
+			--_border: 0;
+		}
+	}
+}

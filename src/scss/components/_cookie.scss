@@ -1,0 +1,46 @@
+.cookie {
+	--content-width: 1340px;
+	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+	display: none;
+	width: 100%;
+	pointer-events: none;
+	position: fixed;
+	left: 0;
+	bottom: 40px;
+	z-index: 10;
+
+	&__modal {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		background-color: var(--background-light);
+		border: 1px solid #D7DDE3;
+		border-radius: 16px;
+		padding: 16px 30px;
+		pointer-events: auto;
+
+		&-text {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1;
+			color: var(--dark-color);
+		}
+
+		&-link {
+			--_font-size: inherit;
+			--_font-weight: inherit;
+			--_line-height: inherit;
+			--_color: var(--primary-color);
+			--_border: 0;
+
+			--_color-active: var(--dark-color);
+		}
+
+		&-close {
+			width: 100%;
+			max-width: 220px;
+		}
+	}
+}

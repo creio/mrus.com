@@ -1,0 +1,28 @@
+.section-banner {
+	margin-block-end: 80px;
+}
+
+.banner {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&__inner {
+		max-width: 760px;
+		min-height: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(180deg, rgba(28, 17, 21, 0) 0%, #1c1115 88%);
+		margin-inline: auto;
+		padding-block: 60px;
+		text-align: center;
+	}
+
+	&__title {
+		font-weight: 300;
+		color: var(--light-color);
+		margin-block-end: 0;
+	}
+}

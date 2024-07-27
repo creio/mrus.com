@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	font-weight: 700;
+	color: var(--dark-color);
+	margin: 0 0 16px 0;
+}
+
+h1,
+.h1 {
+	font-family: var(--third-family);
+	font-size: 64px;
+	line-height: 1.2;
+}
+
+h2,
+.h2 {
+	font-family: var(--font-family);
+	font-size: 36px;
+	font-weight: 700;
+	line-height: normal;
+	color: var(--dark-color);
+}
+
+p {
+	color: var(--text-color);
+	margin: 0;
+
+	& + & {
+		margin-top: 16px;
+	}
+}

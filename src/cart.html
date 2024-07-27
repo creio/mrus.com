@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main background-gray">
+      <h1 class="visually-hidden">Корзина</h1>
+      
+      <div class="page-header cart-header">
+        <div class="container cart__container">
+          <div class="cart-header__inner">
+            <h2 class="page-header__title">
+              Корзина
+            </h2>
+
+            <button class="btn cart-header__btn" data-graph-path="modal-cart-clear">
+              Очистить корзину
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="section cart">
+        <div class="container cart__container">
+          <ul class="cart__list list-reset">
+            <li class="cart__list-item">
+              <span class="cart__list-header">
+                товар
+              </span>
+              <div class="cart__list-header-inner">
+                <span class="cart__list-header">
+                  название / опции
+                </span>
+                <span class="cart__list-header">
+                  количество
+                </span>
+                <span class="cart__list-header">
+                  цена
+                </span>
+              </div>
+            </li>
+            <li class="cart__list-item card--cart">
+              <div class="card--cart__picture">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                </picture>
+              </div>
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <h3 class="card--cart__title">
+                    SATE / КОФЕМАШИНА СТ-200 
+                  </h3>
+                  <div class="card--cart__value">
+                    Цвет: Серый
+                  </div>
+                </div>
+
+                <div data-da="#cardCartMobile1,1200,0" class="card--cart__counter counter counter-outline">
+                  <button class="btn counter__minus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                  <button class="btn counter__plus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/plus.svg#svg-plus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="card--cart__bottom">
+                  <div data-da="#cardCartMobile1,1200,1" class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <div data-da="#cardCartMobile1,1200,2" class="card--cart__buttons">
+                    <button type="button" class="btn card--cart__btn">
+                      Поменять
+                    </button>
+                    <button type="button" class="btn card--cart__btn">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="cardCartMobile1" class="card--cart__mobile"></div>
+            </li>
+            <li class="cart__list-item card--cart">
+              <div class="card--cart__picture">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                </picture>
+              </div>
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <h3 class="card--cart__title">
+                    SATE / КОФЕМАШИНА СТ-200 
+                  </h3>
+                  <div class="card--cart__value">
+                    Цвет: Серый
+                  </div>
+                </div>
+
+                <div data-da="#cardCartMobile2,1200,0" class="card--cart__counter counter counter-outline">
+                  <button class="btn counter__minus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                  <button class="btn counter__plus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/plus.svg#svg-plus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="card--cart__bottom">
+                  <div data-da="#cardCartMobile2,1200,1" class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <div data-da="#cardCartMobile2,1200,2" class="card--cart__buttons">
+                    <button type="button" class="btn card--cart__btn">
+                      Поменять
+                    </button>
+                    <button type="button" class="btn card--cart__btn">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="cardCartMobile2" class="card--cart__mobile"></div>
+            </li>
+            <li class="cart__list-item card--cart">
+              <div class="card--cart__picture">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                </picture>
+              </div>
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <h3 class="card--cart__title">
+                    SATE / КОФЕМАШИНА СТ-200 
+                  </h3>
+                  <div class="card--cart__value">
+                    Цвет: Серый
+                  </div>
+                </div>
+
+                <div data-da="#cardCartMobile3,1200,0" class="card--cart__counter counter counter-outline">
+                  <button class="btn counter__minus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                  <button class="btn counter__plus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/plus.svg#svg-plus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="card--cart__bottom">
+                  <div data-da="#cardCartMobile3,1200,1" class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <div data-da="#cardCartMobile3,1200,2" class="card--cart__buttons">
+                    <button type="button" class="btn card--cart__btn">
+                      Поменять
+                    </button>
+                    <button type="button" class="btn card--cart__btn">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="cardCartMobile3" class="card--cart__mobile"></div>
+            </li>
+            <li class="cart__list-item card--cart">
+              <div class="card--cart__picture">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                </picture>
+              </div>
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <h3 class="card--cart__title">
+                    SATE / КОФЕМАШИНА СТ-200 
+                  </h3>
+                  <div class="card--cart__value">
+                    Цвет: Серый
+                  </div>
+                </div>
+
+                <div data-da="#cardCartMobile4,1200,0" class="card--cart__counter counter counter-outline">
+                  <button class="btn counter__minus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                  <button class="btn counter__plus">
+                    <span class="icon counter__icon">
+                      <svg>
+                        <use xlink:href="img/plus.svg#svg-plus"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="card--cart__bottom">
+                  <div data-da="#cardCartMobile4,1200,1" class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <div data-da="#cardCartMobile4,1200,2" class="card--cart__buttons">
+                    <button type="button" class="btn card--cart__btn">
+                      Поменять
+                    </button>
+                    <button type="button" class="btn card--cart__btn">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="cardCartMobile4" class="card--cart__mobile"></div>
+            </li>
+          </ul>
+
+          <aside class="cart__aside order__aside">
+            <div class="order__detail">
+              <h3 class="order__detail-title">
+                Ваш заказ
+              </h3>
+              <ul class="order__detail-list list-reset">
+                <li class="order__detail-list-item">
+                  <span>
+                    2 товара
+                  </span>
+                  <span>
+                    69 990 ₽
+                  </span>
+                </li>
+                <li class="order__detail-list-item">
+                  <span>
+                    Скидка
+                  </span>
+                  <span>
+                    &#8722; 10 000 ₽
+                  </span>
+                </li>
+                <li class="order__detail-list-item">
+                  <span>
+                    Доставка
+                  </span>
+                  <span>
+                    Бесплатно
+                  </span>
+                </li>
+              </ul>
+              <div class="order__detail-total">
+                <span>
+                  Итого
+                </span>
+                <span>
+                  59 990 ₽
+                </span>
+              </div>
+              <a href="./order.html" class="btn btn-dark btn-dark-lg order__detail-btn">
+                Оформить заказ
+              </a>
+              <div class="order__detail-cashback">
+                <a href="#" class="card__split btn">
+                  <span class="card__split-badge">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/split.svg#svg-split"></use>
+                      </svg>
+                    </span>
+                    <span>
+                      3500 ₽
+                    </span>
+                  </span>
+                  <p class="card__split-text">
+                    <span class="md-hidden">x 4 платежа</span> в Сплит
+                  </p>
+                  <span class="card__split-icon icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right-3.svg#svg-arrow-right-3"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card__yandex btn">
+                  <span class="card__yandex-badge">
+                    <picture>
+                      <img loading="lazy" src="./img/yandex-plus-2.svg" class="card__yandex-image image" width="14" height="14" alt="Иконка">
+                    </picture>
+                    <span>
+                      210
+                    </span>
+                  </span>
+                  <p class="card__yandex-text">
+                    баллов плюса
+                  </p>
+                  <span class="card__yandex-icon icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right-3.svg#svg-arrow-right-3"></use>
+                    </svg>
+                  </span>
+                </a>
+                <div class="card__ypay">
+                  <span class="card__ypay-text">
+                    Оплатите частями или с кешбэком от <img loading="lazy" src="./img/yandex-pay.svg" class="card__ypay-image image" width="45" height="16" alt="Иконка">
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <form id="formPromocode" class="order__promocode">
+              <h4 class="order__promocode-title">
+                Промокод
+              </h4>
+
+              <div class="order__promocode-result"></div>
+
+              <div class="wrapper-field__inner">
+                <input type="text" name="promocode" class="order__promocode-field field" placeholder="Введите промокод" maxlength="36" required>
+                <span class="icon field-success">
+                  <svg>
+                    <use xlink:href="img/check-circular.svg#svg-check-circular"></use>
+                  </svg>
+                </span>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <div class="graph-modal">
+        <div class="graph-modal__container graph-modal--alert" role="dialog" aria-modal="true" data-graph-target="modal-benefit">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+      
+            <h2 class="graph-modal__title">
+              Покупай с выгодой!
+            </h2>
+            
+            <p class="graph-modal__subtitle">
+              Зарегистрируйтесь, чтобы получить скидку по бонусной карте, начать копить бонусы и оплачивать покупки подарочными сертификатами.
+            </p>
+            
+            <div class="graph-modal__buttons">
+              <a href="#" class="btn btn-dark btn-dark-lg">
+                Войти / Зарегистрироваться
+              </a>
+
+              <button type="button" class="btn btn-outline-secondary btn-outline-secondary-lg js-modal-close">
+                Продолжить оформление
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="graph-modal__container graph-modal--alert graph-modal--clear" role="dialog" aria-modal="true" data-graph-target="modal-cart-clear">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+      
+            <h2 class="graph-modal__title">
+              Очистить корзину
+            </h2>
+            
+            <p class="graph-modal__subtitle centered">
+              Вы точно хотите удалить все товары в корзине?
+            </p>
+            
+            <div class="graph-modal__buttons">
+              <button type="button" class="btn btn-outline-secondary btn-outline-secondary-lg js-modal-close">
+                Отменить
+              </button>
+
+              <button type="button" class="btn btn-dark btn-dark-lg js-modal-close">
+                Да, удалить
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="graph-modal__container graph-modal--callback" role="dialog" aria-modal="true" data-graph-target="modal-callback">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+      
+            <h2 class="graph-modal__title">
+              Обратный звонок
+            </h2>
+
+            <form class="graph-modal__form form-validate js-callback-form">
+              <h3 class="graph-modal__subtitle">
+                Оператор ответит в течении 10 минут
+              </h3>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="text" class="field" name="name" placeholder="Имя" required>
+                  <span class="field__placeholder field__placeholder--show">
+                    Имя<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="tel" class="field" name="tel" placeholder="Телефон" required>
+                  <span class="field__placeholder field__placeholder--show">
+                    Телефон<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="graph-modal__buttons">
+                <button type="submit" class="btn btn-dark btn-dark-lg">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="graph-modal__container graph-modal--thanks" role="dialog" aria-modal="true" data-graph-target="modal-callback-thanks">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+            <article class="mailing background-light">
+              <div class="mailing__info">
+                <div class="mailing__info-image">
+                  <span class="icon mailing__info-icon">
+                    <svg>
+                      <use xlink:href="img/check-circular.svg#svg-check-circular"></use>
+                    </svg>
+                  </span>
+                </div>
+                <h2 class="mailing__info-title">
+                  Заявка отправлена
+                </h2>
+                <p class="mailing__info-text">
+                  Оператор свяжется с вами в ближайшее время
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+.callback {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+
+	&__number {
+		font-size: var(--font-size-xs);
+		font-weight: 500;
+		line-height: normal;
+		color: var(--dark-color);
+
+		&.is-active {
+			color: var(--primary-color);
+		}
+	}
+
+	&__btn {
+		--_font-size: var(--font-size-xs);
+		--_font-weight: 500;
+		--_color: var(--primary-color);
+		--_border: 0;
+		--_border-radius: 0;
+		
+		--_color-active: var(--dark-color);
+	}
+}
+
+@media (hover: hover) {
+
+	.callback {
+
+		&__number {
+			transition: color var(--transition-duration) var(--transition-type);
+
+			&:is(:hover, :focus-visible, :active) {
+				color: var(--primary-color);
+			}
+		}
+	}
+
+}

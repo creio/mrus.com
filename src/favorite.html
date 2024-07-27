@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Избранное</h1>
+
+      <div class="page-header">
+        <div class="container">
+          <h2 class="page-header__title">
+            Избранное
+          </h2>
+        </div>
+      </div>
+      
+      @include('partials/favorite.html')
+      
+      @include('partials/mailing.html')
+      @include('partials/modal.html')
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

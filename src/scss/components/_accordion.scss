@@ -1,0 +1,87 @@
+.accordion {
+  overflow: hidden;
+	transition: height var(--transition-duration) var(--transition-type);
+
+	&:not(:last-child) {
+		margin-block-end: 24px;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		color: var(--dark-color);
+		list-style: none;
+		user-select: none;
+		cursor: pointer;
+
+		&::marker {
+			display: none;
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&-anchor {
+			--_font-size: inherit;
+			--_font-weight: inherit;
+			--_color: inherit;
+			--_border: 0;
+
+			width: 100%;
+			justify-content: flex-start;
+			transition: color var(--_transition-duration) var(--_transition-type);
+		}
+	}
+
+	&__content {
+		padding-block-start: 24px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__button {
+		--_font-size: 18px;
+		--_color: var(--dark-color);
+		--_border: 0;
+
+		&.is-active {
+			--_font-weight: 700;
+			--_color-active: var(--dark-color);
+		}
+	}
+
+	&[open] {
+
+		.accordion__title {
+			font-weight: 700;
+		}
+
+	}
+}
+
+@media (hover: hover) {
+
+	.accordion {
+
+		&__title {
+
+			&:is(:hover, :focus-visible, :active) {
+				font-weight: 700;
+				color: var(--primary-color);
+			}
+		}
+
+		&__button {
+
+			&:is(:hover, :focus-visible, :active) {
+				--_color-active: var(--primary-color);
+			}
+		}
+	}
+
+}

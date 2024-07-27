@@ -1,0 +1,154 @@
+.category {
+
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px;
+	}
+
+	&__link {
+		height: 100%;
+		min-height: 200px;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--background-gray);
+		border: 0;
+		border-radius: 16px;
+		padding: 30px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+
+		&-image {
+      width: 100%;
+			max-width: 200px;
+			// max-height: 200px;
+			object-fit: contain;
+			// transform: rotate(18deg);
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		&-title,
+		&-text {
+			max-width: 47%;
+		}
+
+		&-title {
+			font-size: 22px;
+		}
+
+		&-text {
+			font-size: var(--font-size-xs);
+			font-weight: 500;
+
+			span {
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+
+		&-btn {
+			--_background-color: var(--background-light);
+			--_border: 0;
+			--_border-radius: 12px;
+			--_padding-y: 12px;
+			--_padding-x: 12px;
+			
+			--_color-active: var(--light-color);
+			--_background-color-active: var(--primary-color);
+			margin-top: auto;
+
+			.icon {
+				transform: translateX(1px);
+			}
+		}
+
+		&--all {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--primary-color);
+
+			.category__link {
+
+				&-title,
+				&-text {
+					max-width: initial;
+					color: var(--light-color);
+				}
+			}
+
+			&.is-active {
+				background-color: var(--background-gray);
+
+				.category__link {
+
+					&-title {
+						color: var(--dark-color);
+					}
+
+					&-text {
+						color: var(--text-color);
+					}
+				}
+			}
+		}
+
+		&.is-active {
+			box-shadow: var(--box-shadow-2);
+
+			.category__link-btn {
+				--_color: var(--light-color);
+				--_background-color: var(--primary-color);
+			}
+		}
+	}
+}
+
+@media (hover: hover) {
+
+	.category {
+
+		&__link {
+			transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), box-shadow var(--transition-duration) var(--transition-type);
+
+			&-title,
+			&-text {
+				transition: color var(--transition-duration) var(--transition-type);
+			}
+
+			&--all {
+
+				&:is(:hover, :focus-visible, :active) {
+					background-color: var(--background-gray);
+
+					.category__link {
+
+						&-title {
+							color: var(--dark-color);
+						}
+
+						&-text {
+							color: var(--text-color);
+						}
+					}
+				}
+			}
+
+			&:is(:hover, :focus-visible, :active) {
+				box-shadow: var(--box-shadow-2);
+
+				.category__link-btn {
+					--_color: var(--light-color);
+					--_background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+.numeric-list {
+	counter-reset: item;
+	list-style-type: none;
+
+	li {
+		display: block;
+
+		&::before {
+			content: counters(item, ".") ". ";
+			counter-increment: item;
+		}
+	}
+}

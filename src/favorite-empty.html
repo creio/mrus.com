@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Избранное</h1>
+
+      <div class="page-header">
+        <div class="container">
+          <h2 class="page-header__title">
+            Избранное
+          </h2>
+        </div>
+      </div>
+      
+      <section class="section favorite">
+        <div class="container">
+          <div class="page__empty">
+            <p class="page__empty-text">
+              Вы ещё не добавили в избранное ни одного товара. Вы можете выбрать подходящую технику в нашем <a href="./catalog.html" class="btn page__empty-text-btn">каталоге</a> или воспользуйтесь <button type="button" class="btn btn-search page__empty-text-btn">поиском</button>, если ищете что-то конкретное
+            </p>
+            <a href="./catalog.html" class="btn btn-dark btn-dark-lg page__empty-link">
+              Каталог товара
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      @include('partials/modal.html')
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

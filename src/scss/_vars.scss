@@ -1,0 +1,48 @@
+// colors
+:root {
+  // base
+  --font-family: "WixMadeforDisplay", sans-serif;
+  --second-family: "YS-Text", sans-serif;
+  --third-family: "Mulish", sans-serif;
+  --fourth-family: "Jost", sans-serif;
+  --content-width: 1760px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font
+  --font-size-xs: 14px;
+  --font-size: 16px;
+
+  // colors
+  --primary-color: #cf0a2c;
+  --dark-color: #000;
+  --dark-color-alt: #121214;
+  --dark-color-rgba-alt: rgba(0, 0, 0, 0.86);
+  --light-color: #fff;
+  --text-color: #6a6e71;
+  --text-color-light: #697077;
+  --text-color-lighter: #9a9b9b;
+  --text-color-brighter: #afbbc6;
+  --text-color-rgba: rgba(0, 0, 0, 0.5);
+
+  // background
+  --background-dark: #000;
+  --background-dark-alt: #121214;
+  --background-light: #fff;
+  --background-gray: #f5f7f9;
+
+  // border
+  --border-width: 1px;
+  --border-color: transparent;
+
+  // box-shadow
+  --box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.04);
+  --box-shadow-alt: 0 0 16px 0 rgba(0, 0, 0, 0.08);
+  --box-shadow-alt-2: 0 0 22px 0 rgba(0, 0, 0, 0.08);
+  --box-shadow-2: 0 4px 50px 0 rgba(141, 141, 141, 0.15);
+  --box-shadow-3: 0 4px 50px 0 rgba(141, 141, 141, 0.25);
+
+  // transitions
+  --transition-type: ease-in-out;
+  --transition-duration: 250ms;
+}

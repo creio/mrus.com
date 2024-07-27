@@ -1,0 +1,432 @@
+.graph-modal {
+	--_modal-padding-y: 30px;
+	--_modal-padding-x: 60px;
+	background-color: rgba(0, 0, 0, 0.32);
+
+	&::before {
+		all: unset;
+	}
+
+	&__close {
+		--_border: 0;
+		--_border-radius: 0;
+
+		height: auto;
+		top: var(--_modal-padding-y);
+		right: var(--_modal-padding-x);
+		background-image: initial;
+		z-index: 11;
+
+		&-icon {
+			--_i-size: 18px;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 1120px;
+		min-height: calc(100% - 100px);
+
+		align-items: center;
+		background-color: transparent;
+		padding: 0;
+		pointer-events: none;
+
+		&.graph-modal-open {
+			display: flex;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		background-color: var(--background-light);
+		border-radius: 16px;
+		padding: var(--_modal-padding-y) var(--_modal-padding-x);
+		pointer-events: auto;
+		position: relative;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		text-align: center;
+		margin-block-end: 30px;
+	}
+
+	&__list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-block-end: 30px;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
+		gap: 20px;
+
+		> * {
+			width: 100%;
+			max-width: 244px;
+		}
+	}
+
+	&__interested {
+		margin-block-start: 30px;
+	}
+
+	&__agree {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1;
+		color: var(--text-color-brighter);
+	}
+	
+}
+
+.graph-modal--image {
+	--_modal-padding-y: 0;
+	--_modal-padding-x: 0;
+
+	&.graph-modal__container {
+		max-width: 100%;
+		height: 100%;
+		min-height: 100%;
+		margin: 0;
+	}
+
+	.graph-modal__close {
+		--_background-color: var(--background-light);
+		--_border-radius: 50%;
+		--_padding-y: 12px;
+		--_padding-x: 12px;
+
+		--_background-color-active: var(--background-light);
+
+		top: 50px;
+    right: 70px;
+	}
+
+	.graph-modal__content {
+		display: grid;
+		grid-template-columns: 220px calc(100vw - 280px);
+		border-radius: initial;
+	}
+}
+
+.graph-modal--image-review {
+
+	.swiper-picture-zoom__picture,
+	.swiper-picture-thumb__picture {
+		padding: 0;
+
+		picture {
+			height: 100%;
+			display: block;
+			border-radius: inherit;
+		}
+
+		.image {
+			width: 100%;
+			height: 100%;
+			display: block;
+			border-radius: inherit;
+			object-fit: cover;
+		}
+	}
+}
+
+.graph-modal--price {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	&.graph-modal-open {
+		display: grid;
+	}
+
+	.graph-modal__content {
+		position: relative;
+	}
+
+	.graph-modal__close {
+		top: 16px;
+    right: 16px;
+	}
+
+	.mailing {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		background-color: inherit;
+		padding: 0;
+
+		&__info {
+
+			&-title {
+				font-size: 22px;
+			}
+
+			&-text {
+				font-size: 14px;
+				color: var(--text-color);
+			}
+		}
+
+		&__form {
+			grid-template-columns: 1fr;
+
+			&-checkbox {
+				align-items: flex-start;
+				gap: 16px;
+				order: unset;
+			}
+
+			&-button {
+				margin-block-start: 10px;
+			}
+		}
+	}
+}
+
+.graph-modal--callback {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 22px;
+		text-align: left;
+	}
+
+	.graph-modal__subtitle {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--text-color);
+		margin-block-end: 4px;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 16px;
+	}
+
+	.graph-modal__buttons {
+		margin-block-start: 14px;
+		justify-content: flex-start;
+	}
+}
+
+.graph-modal--alert {
+	--_modal-padding-y: 30px;
+	--_modal-padding-x: 60px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 24px;
+		line-height: 1.2;
+		margin-block-end: 40px;
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--dark-color);
+	}
+
+	.graph-modal__buttons {
+		gap: 16px;
+		margin-block-start: 30px;
+
+		> * {
+			flex: 0 0 calc(50% - 8px);
+			max-width: 100%;
+		}
+	}
+}
+
+.graph-modal--payment {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 22px;
+		line-height: 1;
+		margin-block-end: 40px;
+		text-align: left;
+	}
+
+	.graph-modal__text {
+		font-size: 18px;
+		font-weight: 500;
+		color: var(--dark-color);
+		line-height: 1.2;
+
+		+ .graph-modal__text {
+			margin-block-start: 20px;
+		}
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		line-height: 1;
+		margin-block: 40px 30px;
+	}
+
+	.graph-modal__image {
+		display: block;
+	}
+}
+
+.graph-modal--review {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__close {
+		top: 16px;
+		right: 16px;
+	}
+
+	.graph-modal__header {
+		display: flex;
+		align-items: flex-start;
+		gap: 16px;
+		margin-block-end: 30px;
+
+		&-picture {
+			width: 80px;
+			height: 80px;
+			display: block;
+			flex-shrink: 0;
+			background-color: var(--background-gray);
+			border-radius: 10px;
+			padding: 6px;
+		}
+
+		&-image {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.graph-modal__title {
+		font-size: 24px;
+		line-height: 1.2;
+		text-align: left;
+		margin-block-end: 0;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 12px;
+		
+		&-title {
+			margin-block-end: 20px;
+		}
+
+		&-rating {
+			margin-block-end: 18px;
+		}
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		line-height: 1;
+
+		&:not(.review-image__title, .graph-modal__form-title) {
+			margin-block-end: 8px;
+		}
+	}
+
+	.graph-modal__rating {
+		--_stars-size: 22px;
+		--_stars-gap: 16px;
+
+		&-picture {
+			display: none;
+		}
+	}
+
+	.graph-modal__review-image {
+		margin-block-start: 18px;
+	}
+
+	.graph-modal__buttons {
+		justify-content: flex-start;
+		margin-block-start: 18px;
+	}
+}
+
+.graph-modal--help {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__close {
+		top: 16px;
+		right: 16px;
+	}
+
+	.graph-modal__title {
+		font-size: 22px;
+		text-align: left;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 16px;
+	}
+
+	.graph-modal__checkbox {
+		margin-block-start: 4px;
+	}
+
+	.graph-modal__buttons {
+		justify-content: flex-start;
+		margin-block-start: 14px;
+	}
+}
+
+.graph-modal--thanks {
+
+	max-width: 700px;
+
+	.mailing {
+		grid-template-columns: 1fr;
+		padding: 10px 0 30px;
+		text-align: center;
+
+		&__info {
+
+			&-image {
+				display: flex;
+				justify-content: center;
+				margin-block-end: 30px;
+			}
+
+			&-icon {
+				--_i-size: 34px;
+
+				padding: 2px;
+			}
+
+			&-title {
+				font-size: 24px;
+			}
+		}
+	}
+}
