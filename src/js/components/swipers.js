@@ -6,10 +6,10 @@ new Swiper('.swiper__hero', {
   spaceBetween: 16,
   
   loop: true,
-  /*autoplay: {
+  autoplay: {
     delay: 3000,
     disableOnInteraction: false,
-  },*/
+  },
 
   navigation: {
     nextEl: '.swiper__hero-next',
