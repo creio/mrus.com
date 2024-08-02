@@ -140,6 +140,12 @@ a {
   max-width: var(--container-width);
 }
 
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+}
+
 .container-xxl {
   width: 100%;
   max-width: calc(1340px + (var(--container-offset) * 2));

@@ -636,6 +636,7 @@
 
 		&__logo {
 			margin-inline: auto;
+      display: none;
 		}
 
 		&__menu {
@@ -2285,8 +2286,8 @@
     background-size: unset;
 
 		&__inner {
-			width: 100%;
-			min-height: 480px;
+			// width: 100%;
+			min-height: 520px;
 			align-items: center;
       justify-content: flex-end;
       padding: 0 16px;

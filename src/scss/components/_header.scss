@@ -5,7 +5,7 @@
 
 	&-fixed {
 		position: fixed;
-		top: -78px;
+		top: -115px;
 		left: 0;
 		z-index: 20;
 	}
@@ -23,6 +23,10 @@
 		display: flex;
 		align-items: center;
 		flex-shrink: 0;
+
+    img {
+      max-height: 50px;
+    }
 	}
 
 	&__location {
@@ -200,7 +204,11 @@
 			display: none;
 		}
 	}
-
+  &__menu.menu--active {
+    .header__logo {
+      display: flex;
+    }
+  }
 }
 
 .dependent-element {
