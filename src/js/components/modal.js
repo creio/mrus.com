@@ -12,9 +12,9 @@ if (modalBenefit) {
 	const currentTime = new Date().getTime();
 	const elapsedTime = currentTime - lastCloseTime;
 
-	if (!localStorageValue || (localStorageValue && elapsedTime >= intervalDuration)) {
-		modal.open("modal-benefit");
-	}
+	// if (!localStorageValue || (localStorageValue && elapsedTime >= intervalDuration)) {
+	// 	modal.open("modal-benefit");
+	// }
 
 	closeBtns?.forEach((btn) => {
 		btn.addEventListener('click', () => {

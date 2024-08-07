@@ -26,7 +26,7 @@ if (classProductTabs) {
 			});
 		}
 		
-		if (targetValue === btnAllReviews.id) {
+		if (targetValue === btnAllReviews?.id) {
 			btnAllReviews.addEventListener('click', function() {
 				handleClick(target, 50);
 			});

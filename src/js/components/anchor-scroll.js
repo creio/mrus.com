@@ -1,7 +1,8 @@
 const scrollElements = document.querySelectorAll('.scroll-element'),
 	scrollSections = document.querySelectorAll('.section-scroll'),
 	scrollScrollAccordions = document.querySelectorAll('.accordion-scroll'),
-	scrollNavigations = document.querySelectorAll('.nav-scroll')
+	scrollNavigations = document.querySelectorAll('.nav-scroll'),
+  scrollFilter = document.querySelector('.catalog__filter')
 
 window.onscroll = () => {
 
@@ -47,6 +48,15 @@ window.onscroll = () => {
 				}
 			})
 			scrollNavigations?.forEach((otherNav) => {
+
+        const navElement = document.querySelector('.nav-scroll.is-active');
+        if (navElement) {
+            scrollFilter?.scrollTo({
+                top: otherNav.getBoundingClientRect().top - headerHeight * 5,
+                // behavior: 'smooth'
+            });
+        }
+
 				otherNav.classList.remove('is-active')
 
 				if (otherNav.classList.contains('tabs__nav-btn--active')) {

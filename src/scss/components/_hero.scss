@@ -9,6 +9,13 @@
 		height: 100%;
 		position: relative;
 	}
+
+  &-prev {
+    margin-left: 20px;
+  }
+  &-next {
+    margin-right: 20px;
+  }
 }
 
 .hero {

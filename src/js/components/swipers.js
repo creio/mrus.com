@@ -30,6 +30,7 @@ new Swiper('.swiper__card', {
   spaceBetween: 16,
 
   loop: true,
+  // loopAdditionalSlides: 10,
 
   navigation: {
     nextEl: '.swiper__card-next',

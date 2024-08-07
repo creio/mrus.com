@@ -9,11 +9,13 @@
 
 	&__filter {
 		height: max-content;
+    max-height: 70vh;
 		background-color: var(--background-light);
 		top: calc((var(--header-height) / 2) + 80px);
 		left: 0;
 		position: sticky;
 		z-index: 10;
+    overflow: auto;
 
 		&-title {
 			font-size: 32px;
@@ -45,6 +47,7 @@
 		&-title {
 			font-size: 36px;
 			margin-block-end: 0;
+      text-transform: uppercase;
 		}
 
 		&-header {
