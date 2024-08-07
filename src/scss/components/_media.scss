@@ -789,10 +789,10 @@
 
 		&__account {
 
-			&-favorite,
+			/*&-favorite,
 			&-account {
 				display: none;
-			}
+			}*/
 		}
 
 		&__search {
@@ -978,8 +978,12 @@
 					transform: translateY(1px);
 					padding-block: 14px;
 					position: relative;
+          min-width: 100px;
+          font-size: 14px;
 
 					&-anchor {
+            justify-content: center;
+            text-align: center;
 						
 						&::before {
 							content: '';
@@ -2539,7 +2543,7 @@
 		&__filter {
 
 			.accordion__title {
-				font-size: 16px;
+				font-size: 14px;
 			}
 		}
 
