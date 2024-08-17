@@ -64,6 +64,8 @@ const orderValidateForms = document.querySelectorAll('.order-validate');
 
 if (orderValidateForms.length > 0) {
 	orderValidateForms.forEach((form) => {
+    const currentStep = form.closest('.order__step');
+    const stepHeader = currentStep.querySelector('.order__step-header-info');
 		const btnSubmit = form.querySelector('button[type="submit"]');
 		const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
 		const selectChoices = form.querySelectorAll('.choices')
@@ -82,19 +84,39 @@ if (orderValidateForms.length > 0) {
 			event.preventDefault();
 
 			let isValid = true;
+      let errInputs = '';
+      let valInputs = '';
 
 			wrapperFields.forEach((wrapper) => {
 				const input = wrapper.querySelector('.field');
 
 				if (input.hasAttribute('required') && input.value.trim() === '') {
 					input.value = '';
+          errInputs += input.placeholder + ' / ';
 					wrapper.classList.add('is-valid');
 					showAlertModal(document.querySelector('#alertFormValid'))
 					isValid = false;
 				} else {
 					wrapper.classList.remove('is-valid');
+          if (input.name === 'name' || input.name === 'fullname') {
+            valInputs += input.value + ' ';
+          } else if (input.name === 'email' || input.name === 'tel') {
+            valInputs += '/ ' + input.value + ' ';
+          } else if (input.name === 'city') {
+            valInputs += input.placeholder + ' ' + input.value + ' ';
+          } else if (input.value !== '') {
+            valInputs += '/ ' + input.placeholder + ' ' + input.value + ' ';
+          }
 				}
 			});
+      let alertText = document?.querySelector('#alertFormValid .alert__modal-text-accent');
+      if (errInputs !== '' && alertText) {
+        alertText.innerHTML = errInputs;
+      }
+
+      if (valInputs !== '') {
+        stepHeader.innerHTML = valInputs;
+      }
 
 			if (selectChoices.length > 0) {
 				selectChoices.forEach((select) => {

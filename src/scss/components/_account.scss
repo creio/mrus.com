@@ -193,6 +193,32 @@
   }
 }
 
+.order-page__header {
+  margin-bottom: 0;
+}
+
+.order-links {
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  &__link {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-right: 30px;
+
+    &.active {
+      color: var(--dark-color);
+    }
+  }
+}
+
+.order-page__start {
+  border-top: 1px solid var(--border-light);
+  gap: 30px;
+  padding-top: 30px;
+}
+
 .account-aside {
 	height: max-content;
 	position: sticky;
@@ -417,8 +443,15 @@
 
 @media (hover: hover) {
 
-	.account-aside {
+  .order-links {
+    &__link {
+      &:is(:hover, :focus-visible, :active) {
+        color: var(--dark-color);
+      }
+    }
+  }
 
+	.account-aside {
 		&__link {
 			transition: color var(--_transition-duration) var(--_transition-type);
 
