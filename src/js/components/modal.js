@@ -1,6 +1,7 @@
 import GraphModal from 'graph-modal';
 
-const modal = new GraphModal();
+// const modal = new GraphModal();
+window.modal = new GraphModal();
 const modalBenefit = document.querySelector('[data-graph-target="modal-benefit"]');
 const intervalDuration = 5 * 60;
 

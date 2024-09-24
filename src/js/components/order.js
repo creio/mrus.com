@@ -65,7 +65,7 @@ const orderValidateForms = document.querySelectorAll('.order-validate');
 if (orderValidateForms.length > 0) {
 	orderValidateForms.forEach((form) => {
     const currentStep = form.closest('.order__step');
-    const stepHeader = currentStep.querySelector('.order__step-header-info');
+    const stepHeader = currentStep?.querySelector('.order__step-header-info');
 		const btnSubmit = form.querySelector('button[type="submit"]');
 		const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
 		const selectChoices = form.querySelectorAll('.choices')
@@ -111,6 +111,9 @@ if (orderValidateForms.length > 0) {
 			});
       let alertText = document?.querySelector('#alertFormValid .alert__modal-text-accent');
       if (errInputs !== '' && alertText) {
+        if (errInputs.endsWith('/ ')) {
+            errInputs = errInputs.slice(0, -2);
+        }
         alertText.innerHTML = errInputs;
       }
 

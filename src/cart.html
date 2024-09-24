@@ -35,50 +35,54 @@
                   название / опции
                 </span>
                 <span class="cart__list-header">
-                  количество
+                  кол-во
                 </span>
                 <span class="cart__list-header">
                   цена
                 </span>
               </div>
             </li>
+
             <li class="cart__list-item card--cart">
-              <div class="card--cart__picture">
-                <picture>
-                  <source srcset="./img/card-1.webp" type="image/webp">
-                  <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
-                </picture>
-              </div>
               <div class="card--cart__info">
                 <div class="card--cart__header">
-                  <h3 class="card--cart__title">
-                    SATE / КОФЕМАШИНА СТ-200 
-                  </h3>
-                  <div class="card--cart__value">
-                    Цвет: Серый
+                  <div class="card--cart__picture">
+                    <picture>
+                      <source srcset="./img/card-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                    </picture>
+                  </div>
+                  <div class="card--cart__text">
+                    <h3 class="card--cart__title">
+                      SATE / КОФЕМАШИНА СТ-200
+                    </h3>
+                    <div class="card--cart__value">
+                      Цвет: Серый
+                    </div>
                   </div>
                 </div>
 
-                <div data-da="#cardCartMobile1,1200,0" class="card--cart__counter counter counter-outline">
-                  <button class="btn counter__minus">
-                    <span class="icon counter__icon">
-                      <svg>
-                        <use xlink:href="img/minus.svg#svg-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                  <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
-                  <button class="btn counter__plus">
-                    <span class="icon counter__icon">
-                      <svg>
-                        <use xlink:href="img/plus.svg#svg-plus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-
                 <div class="card--cart__bottom">
-                  <div data-da="#cardCartMobile1,1200,1" class="card--cart__price price">
+
+                  <div class="card--cart__counter counter counter-outline">
+                    <button class="btn counter__minus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/minus.svg#svg-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                    <button class="btn counter__plus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/plus.svg#svg-plus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="card--cart__price price">
                     <span class="price-main">
                       59 990 ₽
                     </span>
@@ -87,19 +91,158 @@
                     </span>
                   </div>
 
-                  <div data-da="#cardCartMobile1,1200,2" class="card--cart__buttons">
-                    <button type="button" class="btn card--cart__btn">
-                      Поменять
-                    </button>
-                    <button type="button" class="btn card--cart__btn">
-                      Удалить
-                    </button>
-                  </div>
+                  <!-- <div class="basket-item-price-one price-one">
+                    Цена за единицу
+                  </div> -->
                 </div>
               </div>
-              <div id="cardCartMobile1" class="card--cart__mobile"></div>
+
+              <div class="card--cart__buttons">
+                <button type="button" class="btn card--cart__btn">
+                  Поменять
+                </button>
+                <button type="button" class="btn card--cart__btn">
+                  Удалить
+                </button>
+              </div>
+
+              <!-- <div id="cardCartMobile2" class="card--cart__mobile"></div> -->
             </li>
+
             <li class="cart__list-item card--cart">
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <div class="card--cart__picture">
+                    <picture>
+                      <source srcset="./img/card-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                    </picture>
+                  </div>
+                  <div class="card--cart__text">
+                    <h3 class="card--cart__title">
+                      SATE / КОФЕМАШИНА СТ-200
+                    </h3>
+                    <div class="card--cart__value">
+                      Цвет: Серый
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card--cart__bottom">
+
+                  <div class="card--cart__counter counter counter-outline">
+                    <button class="btn counter__minus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/minus.svg#svg-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                    <button class="btn counter__plus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/plus.svg#svg-plus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <!-- <div class="basket-item-price-one price-one">
+                    Цена за единицу
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="card--cart__buttons">
+                <button type="button" class="btn card--cart__btn">
+                  Поменять
+                </button>
+                <button type="button" class="btn card--cart__btn">
+                  Удалить
+                </button>
+              </div>
+
+              <!-- <div id="cardCartMobile2" class="card--cart__mobile"></div> -->
+            </li>
+
+            <li class="cart__list-item card--cart">
+              <div class="card--cart__info">
+                <div class="card--cart__header">
+                  <div class="card--cart__picture">
+                    <picture>
+                      <source srcset="./img/card-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/card-1.png" class="card--cart__image image" width="86" height="120" alt="Фото">
+                    </picture>
+                  </div>
+                  <div class="card--cart__text">
+                    <h3 class="card--cart__title">
+                      SATE / КОФЕМАШИНА СТ-200
+                    </h3>
+                    <div class="card--cart__value">
+                      Цвет: Серый
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card--cart__bottom">
+
+                  <div class="card--cart__counter counter counter-outline">
+                    <button class="btn counter__minus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/minus.svg#svg-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+                    <button class="btn counter__plus">
+                      <span class="icon counter__icon">
+                        <svg>
+                          <use xlink:href="img/plus.svg#svg-plus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="card--cart__price price">
+                    <span class="price-main">
+                      59 990 ₽
+                    </span>
+                    <span class="price-sale">
+                      69 990 ₽
+                    </span>
+                  </div>
+
+                  <!-- <div class="basket-item-price-one price-one">
+                    Цена за единицу
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="card--cart__buttons">
+                <button type="button" class="btn card--cart__btn">
+                  Поменять
+                </button>
+                <button type="button" class="btn card--cart__btn">
+                  Удалить
+                </button>
+              </div>
+
+              <!-- <div id="cardCartMobile2" class="card--cart__mobile"></div> -->
+            </li>
+
+
+            <!-- <li class="cart__list-item card--cart">
               <div class="card--cart__picture">
                 <picture>
                   <source srcset="./img/card-1.webp" type="image/webp">
@@ -269,7 +412,8 @@
                 </div>
               </div>
               <div id="cardCartMobile4" class="card--cart__mobile"></div>
-            </li>
+            </li> -->
+
           </ul>
 
           <aside class="cart__aside order__aside">

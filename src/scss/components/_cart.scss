@@ -32,9 +32,11 @@
 
 		&-item {
 			display: grid;
-			grid-template-columns: 136px 1fr;
+			// grid-template-columns: 136px 1fr;
 			gap: 30px;
 			padding: 16px 40px 16px 16px;
+
+      position: relative;
 
 			&:first-child {
 				padding-inline: 16px 40px;

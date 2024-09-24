@@ -22,7 +22,8 @@ function showAlertModal(element) {
 
 formValidate?.forEach((form) => {
 	const submitWatchPrice = form.querySelector('.js-watch-price-form button[type="submit"]');
-	const submitCallback = form.querySelector('.js-callback-form button[type="submit"]')
+	const submitCallback = form.querySelector('.js-callback-form button[type="submit"]');
+  const submitForm = form.querySelector('.js-submit-form button[type="submit"]');
 
 	const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
 	const selectChoices = form.querySelectorAll('.choices');
@@ -44,13 +45,15 @@ formValidate?.forEach((form) => {
 	});
 
 	function formValidation() {
+    let errInputs = '';
+
 		wrapperFields.forEach((wrapper) => {
 			const input = wrapper.querySelector('.field');
 
 			if (input.hasAttribute('required') && input.value.trim() === '') {
 				input.value = '';
+        errInputs += input.placeholder + ' / ';
 				wrapper.classList.add('is-valid');
-				if (document.querySelector('#alertFormValid')) showAlertModal(document.querySelector('#alertFormValid'))
 				isValid = false;
 			} else {
 				wrapper.classList.remove('is-valid');
@@ -61,10 +64,13 @@ formValidate?.forEach((form) => {
 			const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
 			const selectedValue = select.getAttribute('data-value');
 
-			if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
-				selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
+			if (!selectedValue && !selectPlaceholder?.querySelector('.required')) {
+				selectPlaceholder?.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
 			}
-			isValid = false;
+      if (selectPlaceholder) {
+        isValid = false;
+        errInputs += selectPlaceholder.innerText + ' / ';
+      }
 		})
 
 		checkboxs?.forEach((checkbox) => {
@@ -74,6 +80,17 @@ formValidate?.forEach((form) => {
 				isValid = false;
 			}
 		})
+
+    let alertText = document?.querySelector('#alertFormValid .alert__modal-text-accent');
+    if (errInputs !== '' && alertText) {
+      if (errInputs.endsWith(' / ')) {
+          errInputs = errInputs.slice(0, -3);
+      }
+      alertText.innerHTML = '';
+      alertText.innerHTML = errInputs;
+      if (document.querySelector('#alertFormValid')) showAlertModal(document.querySelector('#alertFormValid'));
+    }
+
 	}
 
 	submitWatchPrice?.addEventListener('click', () => {
@@ -115,7 +132,7 @@ formValidate?.forEach((form) => {
 			isValid = true;
 	
 			formValidation()
-	
+
 			if (isValid) {
 				const action = form.getAttribute('action');
 	
@@ -137,6 +154,20 @@ formValidate?.forEach((form) => {
 			}
 		}
 	})
+
+  submitForm?.addEventListener('click', () => {
+    form.onsubmit = function (event) {
+      event.preventDefault();
+
+      isValid = true;
+
+      formValidation()
+
+      if (isValid) {
+        form.submit();
+      }
+    }
+  })
 
 })
 

@@ -18,7 +18,8 @@ const selectConfigOutline = {
 	shouldSort: false,
 	itemSelectText: '',
 	classNames: {
-		containerOuter: 'choices choices--outline'
+		containerOuter: 'choices choices--outline',
+    flippedState: 'is-flip',
 	},
 }
 

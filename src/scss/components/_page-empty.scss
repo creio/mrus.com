@@ -36,4 +36,11 @@
     width: 100%;
     max-width: 270px;
   }
+
+  &.order {
+    padding: 80px 30px;
+    .page__empty-text {
+      max-width: 710px;
+    }
+  }
 }

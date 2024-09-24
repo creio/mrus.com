@@ -5,6 +5,7 @@ if (locations.length > 0) {
 	locations.forEach((btn) => {
 		const dropdown = document?.querySelector('.location__dropdown'),
 					headerOverlay = document?.querySelector('[data-menu-overlay]'),
+          cityInput = document?.querySelector('.order__step-form .field[name="city"]'),
 					dropdownItem = document?.querySelectorAll('.location__dropdown-item'),
 					dropdownClose = document?.querySelector('.location__dropdown-close'),
 					text = btn.querySelector('.location__text')
@@ -42,7 +43,12 @@ if (locations.length > 0) {
 			dropdownItem.forEach((item) => {
 				item.addEventListener('click', function() {
 					dropdownHide()
-					text.textContent = item.innerHTML
+          if (text !== null) {
+				    text.textContent = item.innerHTML
+            if (cityInput !== null) {
+              cityInput.value = item.innerHTML.trim()
+            }
+          }
 				})
 			})
 		}

@@ -6,7 +6,7 @@ if (counters.length > 0) {
 		const minusBtn = item.querySelector('.counter__minus');
 		const plusBtn = item.querySelector('.counter__plus');
 
-		minusBtn.addEventListener('click', function() {
+		/*minusBtn.addEventListener('click', function() {
 			if (event.shiftKey) {
 				decrementCounterBy(10);
 			} else {
@@ -22,7 +22,7 @@ if (counters.length > 0) {
 				incrementCounter();
 			}
 			updateInputWidth();
-		});
+		});*/
 
 		input.addEventListener('input', function() {
 			validateInput()

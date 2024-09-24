@@ -149,7 +149,7 @@
 	.card--cart {
 
 		&__header {
-			max-width: 240px;
+			// max-width: 240px;
 		}
 
 		&__price {
@@ -224,11 +224,10 @@
 
 			&-item {
 				gap: 20px;
-				padding-inline-end: 16px;
 
-				&:first-child {
+				/*&:first-child {
 					padding-inline-end: 16px;
-				}
+				}*/
 			}
 		}
 	}
@@ -288,6 +287,7 @@
 
 	//** (Start) General **//
 	.card--cart {
+    // padding-bottom: 0;
 
 		&__mobile {
 			grid-column: -1 / 1;
@@ -300,7 +300,8 @@
 
 		&__counter {
 			align-self: center;
-			margin-block-start: 0;
+			margin-block-start: -70px;
+      margin-left: 0;
 		}
 
 		&__buttons {
@@ -309,6 +310,7 @@
 			gap: 12px;
 			order: 1;
 			margin-block-start: 0;
+      right: 16px;
 		}
 	}
 	//** (End) General **//
@@ -423,6 +425,7 @@
 		&__list {
 
 			&-item {
+        padding-inline-end: 16px;
 
 				&:first-child {
 					display: none;
@@ -833,7 +836,8 @@
 	.location__dropdown {
 		width: 100%;
 		max-width: 100%;
-		height: 100%;
+		height: auto;
+    max-height: 100%;
 		display: flex;
 		border: 0;
 		border-radius: 0;
@@ -896,6 +900,27 @@
 			margin-block-end: 20px;
 		}
 	}
+
+  .wrapper-field__inner {
+    .location__dropdown {
+      display: none;
+      position: inherit;
+      transform: none;
+      border: 1px solid #d7dde3;
+      border-radius: 12px;
+      padding: 15px 0;
+      max-height: 480px;
+      &.is-show {
+        display: flex;
+      }
+    }
+    .location__dropdown-list {
+      margin: 0;
+    }
+    .location__dropdown-item {
+      padding: 0 20px;
+    }
+  }
 
 	.callback {
 
@@ -2003,8 +2028,8 @@
 		gap: 8px;
 
 		&-main {
-			width: 100%;
-			order: 1;
+			// width: 100%;
+			// order: 1;
 			font-size: 18px;
 		}
 
@@ -2128,16 +2153,12 @@
 				}
 			}
 		}
-
-		&__counter {
-			display: none;
-		}
 	}
 
 	.card--cart {
 
 		&__picture {
-			width: 80px;
+			min-width: 80px;
 			height: 80px;
 		}
 
@@ -2146,7 +2167,7 @@
 		}
 
 		&__info {
-			padding-block: 10px;
+			// padding-block: 10px;
 		}
 
 		&__header {
@@ -2158,7 +2179,12 @@
 			font-size: 16px;
 		}
 
+    &__text {
+      margin-block: 10px;
+    }
+
 		&__counter {
+      margin-block-start: 0;
 
 			.counter__minus,
 			.counter__plus {
@@ -2171,10 +2197,23 @@
 			}
 		}
 
+    &__bottom {
+      padding-top: 0;
+    }
+
 		&__price {
 			font-size: 16px;
+      align-items: center;
 		}
+
+    &__buttons {
+      flex: 1;
+      bottom: 16px;
+    }
 	}
+  .price-one {
+    display: none;
+  }
 
 	.card--mini {
 		gap: 12px;
@@ -2374,7 +2413,7 @@
 	.card-search {
 
 		&__price {
-			flex-wrap: nowrap;
+			// flex-wrap: nowrap;
 
 			.price-main {
 				width: auto;
@@ -3111,8 +3150,10 @@
 			gap: 20px;
 
 			&-item {
-				grid-template-columns: 80px 1fr;
+				// grid-template-columns: 80px 1fr;
 				gap: 12px 10px;
+        display: flex;
+        flex-direction: column;
 			}
 		}
 	}
@@ -4056,6 +4097,9 @@
 @media screen and (max-width: 576px) {
 
 	//** (Start) General **//
+  .cart__list-item {
+    padding-bottom: 16px;
+  }
 	.counter-outline {
 
 		.counter__input {
@@ -4070,9 +4114,18 @@
 			gap: 10px 12px;
 		}
 
-		&__value {
-			font-size: 14px;
+		&__info {
+			flex-direction: column;
 		}
+
+    &__bottom {
+      padding-top: 12px;
+      align-items: center;
+    }
+
+    &__value {
+      font-size: 14px;
+    }
 
 		&__counter,
 		&__price {
@@ -4088,9 +4141,10 @@
 		}
 
 		&__price {
-			flex-direction: row;
-			justify-content: flex-end;
+			justify-content: flex-start;
 			gap: 4px 16px;
+      flex-direction: row-reverse;
+      flex: 1;
 			
 			.price-main {
 				width: auto;
@@ -4102,6 +4156,10 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			gap: 10px 12px;
+      display: flex;
+      position: relative;
+      bottom: unset;
+      right: unset;
 		}
 
 		&__btn {

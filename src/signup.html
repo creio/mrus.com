@@ -34,7 +34,7 @@
                 </a>
               </li>
             </ul>
-            <form class="account-signin__form form-validate">
+            <form class="account-signin__form form-validate js-submit-form">
               <div class="account-signin__form-start">
                 <div class="wrapper-field">
                   <div class="wrapper-field__inner">
@@ -110,6 +110,26 @@
           </div>
         </div>
       </section>
+
+      <div class="alert">
+          <div class="alert__container container">
+              <div id="alertFormValid" class="alert__modal" data-show-alert="5000">
+                  <h3 class="alert__modal-title">
+                      Ошибка
+                  </h3>
+                  <p class="alert__modal-text">
+                      Вы забыли ввести данные: <span class="alert__modal-text-accent"></span>
+                  </p>
+                  <button type="button" class="btn alert__modal-close js-alert-close">
+                    <span class="icon alert__modal-close-icon">
+                      <svg>
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+              </div>
+          </div>
+      </div>
 
       <div class="graph-modal">
         <div class="graph-modal__container graph-modal--callback" role="dialog" aria-modal="true" data-graph-target="modal-callback">
